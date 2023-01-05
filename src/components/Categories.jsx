@@ -21,6 +21,7 @@ const Categories = () => {
         {categories.map((category, index) => {
           return (
             <li
+              key={index}
               onClick={() => onClickCategory(index)}
               className={activeCategory === index ? "active" : ""}
             >
