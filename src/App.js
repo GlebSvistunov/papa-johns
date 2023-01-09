@@ -7,18 +7,18 @@ import { Skeleton } from "./components/PizzaBlock/Skeleton";
 import { useState, useEffect } from "react";
 import { Home } from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
     <div className="wrapper">
       <Header />
       <div className="content">
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </div>
     </div>
   );
